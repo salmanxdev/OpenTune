@@ -12,7 +12,6 @@ plugins {
 
 android {
     namespace = "com.arturo254.opentune"
-    //noinspection GradleDependency
     compileSdk = 35
 
     defaultConfig {
@@ -39,10 +38,11 @@ android {
         }
     }
 
-    // ✅ Rename APK to "Spotify-<buildtype>.apk"
+    // ✅ FIXED – WORKING APK RENAME FOR GRADLE 8+
     applicationVariants.all {
         outputs.all {
-            outputFileName = "Spotify-${name}.apk"
+            val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            output.outputFileName = "Spotify-${versionName}.apk"
         }
     }
 
@@ -62,7 +62,6 @@ android {
         compose = true
     }
 
-    // Java 21 support
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_21
