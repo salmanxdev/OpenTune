@@ -39,6 +39,13 @@ android {
         }
     }
 
+    // ✅ Rename APK to "Spotify-<buildtype>.apk"
+    applicationVariants.all {
+        outputs.all {
+            outputFileName = "Spotify-${name}.apk"
+        }
+    }
+
     signingConfigs {
         getByName("debug") {
             if (System.getenv("MUSIC_DEBUG_SIGNING_STORE_PASSWORD") != null) {
@@ -55,7 +62,7 @@ android {
         compose = true
     }
 
-    // ✅ Alineamos TODO a Java 21
+    // Java 21 support
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_21
