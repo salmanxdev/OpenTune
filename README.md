@@ -320,6 +320,9 @@ Ayuda a traducir OpenTune a tu idioma o mejorar las traducciones existentes:
 [![Chat de Telegram](https://img.shields.io/badge/Telegram-Chat-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/OpenTune_chat)
 [![Actualizaciones de Telegram](https://img.shields.io/badge/Telegram-Actualizaciones-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/opentune_updates)
 
+
+##
+
 </div>
 
 ### Flujo de Trabajo de Desarrollo
